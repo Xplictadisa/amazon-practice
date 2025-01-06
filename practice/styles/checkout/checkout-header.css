@@ -1,0 +1,49 @@
+.checkout-header-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background-color: white;
+}
+
+.checkout-header-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  height: 60px;
+  align-items: center;
+  max-width: 1180px;
+  margin: auto;
+}
+
+.checkout-amazon-logo-desktop {
+  width: 110px;
+  margin-top: 8px;
+}
+
+.checkout-amazon-logo-mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .checkout-amazon-logo-desktop {
+    display: none;
+  }
+
+  .checkout-amazon-logo-mobile {
+    display: inline-block;
+    width: 30px;
+  }
+}
+.checkout-header-middle-section {
+  width: 220px;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+
+.return-to-home-link {
+  color: rgb(0, 113, 133);;
+}
+

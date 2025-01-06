@@ -1,0 +1,138 @@
+
+.amazon-header {
+  background-color: black;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.amazon-logo-mobile {
+  display: none;
+}
+.amazon-logo-desktop {
+  width: 110px;
+  padding: 8px;
+}
+
+.amazon-logo-desktop:hover {
+  border: 1px solid white;
+}
+
+.amazon-header-left-section{
+  width: 150px;
+  /* border: 2px solid red; */
+  margin-right: 20px;
+}
+
+@media (max-width: 575px) {
+  .amazon-logo-desktop {
+    display: none;
+  }
+
+  .amazon-logo-mobile {
+    display: block;
+    height: 35px;
+    margin-top: 5px;
+  }
+
+  .amazon-header-left-section {
+    width: fit-content;
+  }
+}
+
+.amazon-header-middle-section {
+  flex: 1;
+  max-width: 850px;
+  display: flex;
+  align-items: center;
+}
+
+.search-button {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(254, 189, 105);
+  color: black;
+  border: none;
+  margin-left: 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.search-bar {
+  height: 40px;
+  flex: 1;
+  width: 0;
+  margin-right: 0;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.search-bar:focus {
+  outline: 2px solid rgb(254, 189, 105);
+}
+
+.search-icon-button {
+  width: 20px;
+}
+
+.amazon-header-right-section {
+  width: 170px;
+  /* border: 1px solid green; */
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-text {
+  font-weight: bold;
+}
+
+.cart-icon {
+  width: 50px;
+}
+
+.orders-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+}
+
+.orders-link:hover {
+  border: 1px solid white;
+}
+
+.cart-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 3px;
+}
+
+.cart-link:hover {
+  border: 1px solid white;
+}
+
+.cart-qauntity {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-weight: bold;
+  color:  rgb(231, 144, 31);
+}
+.cart-text {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
