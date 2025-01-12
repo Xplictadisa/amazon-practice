@@ -54,9 +54,15 @@ export function removeFromCart(index) {
 }
 
 export function addedCartText(productId) {
+  let timeoutId;
+  
+  if (timeoutId) {
+    clearTimeout(timeoutId);
+  }
+
   document.querySelector(`.js-added-text-${productId}`).classList.add('added-text-visible');
 
-    setTimeout(() => {
+    timeoutId = setTimeout(() => {
       document.querySelector(`.js-added-text-${productId}`).classList.remove('added-text-visible'); 
     }, 2000) 
 }
