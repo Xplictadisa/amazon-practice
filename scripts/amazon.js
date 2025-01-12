@@ -1,5 +1,5 @@
 import {products} from '../data/products.js';
-import {addToCart, updateCartQuantity} from '../data/cart.js';
+import {addToCart, updateCartQuantity, addedCartText} from '../data/cart.js';
 import {formatCurrency} from '../utils/money.js';
 
 
@@ -40,6 +40,11 @@ products.forEach((product) => {
           </select>
         </div>
 
+        <div class="added-text js-added-text-${product.id}">
+          <img class="checked-image" src="media/images/checked.png" alt=""> 
+          Added
+        </div>
+
         <div class="add-to-cart-button-container">
           <button class="add-to-cart-button js-add-to-cart-button" data-product-id="${product.id}">Add to Cart</button>
         </div>
@@ -57,7 +62,8 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
     const productId = button.dataset.productId;
     const selectQuant = document.querySelector(`.js-quantity-selector-${productId}`);
     const quantity = Number(selectQuant.value);
-
+   
+    addedCartText(productId);
     addToCart(productId, quantity);
     updateCartQuantity();
   })

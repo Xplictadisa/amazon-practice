@@ -78,6 +78,25 @@
   outline: 2px solid rgb(254, 189, 105);
 }
 
+.checked-image {
+  width: 20px;
+}
+
+.added-text {
+  margin: 10px 0;
+  color: rgb(2, 82, 2);;
+  font-weight: 300;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.added-text-visible {
+  opacity: 1;
+}
+
 .add-to-cart-button-container {
   display: flex;
   justify-content: center;
@@ -90,3 +109,4 @@
   border: none;
   background-color: rgb(252, 210, 0);
 }
+

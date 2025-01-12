@@ -53,6 +53,13 @@ export function removeFromCart(index) {
     savetoStorage();
 }
 
+export function addedCartText(productId) {
+  document.querySelector(`.js-added-text-${productId}`).classList.add('added-text-visible');
+
+    setTimeout(() => {
+      document.querySelector(`.js-added-text-${productId}`).classList.remove('added-text-visible'); 
+    }, 2000) 
+}
 
 export function updateDeliveryOption(productId, deliveryOptionId) {
   let matchingItem;
