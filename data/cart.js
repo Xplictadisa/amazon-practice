@@ -54,7 +54,7 @@ export function removeFromCart(index) {
     savetoStorage();
 }
 
-export function addedCartText(productId) {
+export function addedToCartMessage(productId) {
   let timeoutId;
 
   if (timeoutId) {
