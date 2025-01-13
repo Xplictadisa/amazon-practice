@@ -1,6 +1,6 @@
 import { cart } from "../../data/cart.js";
 
-function checkoutTotal() {
+export function checkoutTotal() {
   let cartQuantity  = 0;
 
   cart.forEach((item) => {

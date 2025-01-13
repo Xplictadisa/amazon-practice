@@ -4,7 +4,7 @@ import {formatCurrency} from '../../utils/money.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import {deliveryOptions, getDeliveryOption, calculateDeliveryDate} from '../../data/deliveryOptions.js';
 import {renderPaymentSummary} from './paymentSummary.js';
-import { renderCheckoutHeader } from './checkoutHeader.js';
+import { renderCheckoutHeader} from './checkoutHeader.js';
 
 export function renderOrderSummary() {
   renderCheckoutHeader();
@@ -68,12 +68,11 @@ export function renderOrderSummary() {
 
   document.querySelectorAll('.js-delete-link').forEach((link, index) => {
     link.addEventListener('click', () => {
-      const productId = link.dataset.productId;
+      //const productId = link.dataset.productId;
       removeFromCart(index);
-      renderCheckoutHeader();
-      const container = document.querySelector(`.js-cart-item-${productId}`);
-      container.remove();
-
+      // const container = document.querySelector(`.js-cart-item-${productId}`);
+      // container.remove();
+      renderOrderSummary()
       renderPaymentSummary();
     })
   });

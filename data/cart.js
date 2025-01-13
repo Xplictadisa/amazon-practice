@@ -50,12 +50,13 @@ export function removeFromCart(index) {
     */
 
     cart.splice(index, 1);
+    console.log(cart);
     savetoStorage();
 }
 
 export function addedCartText(productId) {
   let timeoutId;
-  
+
   if (timeoutId) {
     clearTimeout(timeoutId);
   }
