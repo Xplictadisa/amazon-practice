@@ -61,12 +61,20 @@ export function renderPaymentSummary() {
       </div>
     </div>
 
-    <button class="place-order-button button-primary">
+    <button class="place-order-button button-primary js-place-order-button">
       Place your order
     </button>
+
+    <div class="payment-info js-payment-info">Make payment here</div>
   `;
 
 
   document.querySelector('.js-payment-summary')
     .innerHTML = paymentSummaryHTML;
+
+  document.querySelector('.js-place-order-button')
+    .addEventListener('click', () => {
+      document.querySelector('.js-payment-info').classList.add('payment-info-visible')
+    })
 }
+

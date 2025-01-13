@@ -192,3 +192,17 @@
 .update-input-error {
   color: rgb(247, 61, 61);
 }
+
+.payment-info {
+  width: 100%;
+  height: 300px;
+  background-color: red;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 5px;
+  display: none;
+}
+
+.payment-info-visible {
+  display: block;
+}
