@@ -1,5 +1,5 @@
 
-export let cart = JSON.parse(localStorage.getItem('cart'));
+let cart = JSON.parse(localStorage.getItem('cart'));
 
 if (!cart) {
   cart = [{
@@ -13,10 +13,11 @@ if (!cart) {
   }];
 }
 
-export function  savetoStorage() {
+function  savetoStorage() {
   localStorage.setItem('cart', JSON.stringify(cart))
 }
-export function addToCart(productId, quantity) {
+
+function addToCart(productId, quantity) {
   let matchingItem;
 
     cart.forEach((cartItem) => {
@@ -37,7 +38,7 @@ export function addToCart(productId, quantity) {
     savetoStorage();
 }
 
-export function removeFromCart(index) {
+function removeFromCart(index) {
   /*
   const newCart = [];
     cart.forEach((cartItem) => {
@@ -54,7 +55,7 @@ export function removeFromCart(index) {
     savetoStorage();
 }
 
-export function addedToCartMessage(productId) {
+function addedToCartMessage(productId) {
   let timeoutId;
 
   if (timeoutId) {
@@ -68,7 +69,7 @@ export function addedToCartMessage(productId) {
     }, 2000) 
 }
 
-export function updateDeliveryOption(productId, deliveryOptionId) {
+function updateDeliveryOption(productId, deliveryOptionId) {
   let matchingItem;
 
   cart.forEach((cartItem) => {
@@ -81,7 +82,7 @@ export function updateDeliveryOption(productId, deliveryOptionId) {
   savetoStorage();
 }
 
-export function updateCartQuantity() {
+function updateCartQuantity() {
   let cartQuantity  = 0;
 
   cart.forEach((item) => {
@@ -92,7 +93,7 @@ export function updateCartQuantity() {
   console.log(cart);
 }
 
-export function updateQuantity(productId, newQuantity) {
+function updateQuantity(productId, newQuantity) {
 
   let matchingProduct;
   cart.forEach((cartItem) => {
@@ -106,4 +107,8 @@ export function updateQuantity(productId, newQuantity) {
 
   savetoStorage();
   console.log(cart);
+}
+
+export {cart, savetoStorage, addToCart, removeFromCart, addedToCartMessage,
+  updateDeliveryOption, updateCartQuantity, updateQuantity
 }
